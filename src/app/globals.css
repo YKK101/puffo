@@ -3,19 +3,116 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #0A0B0D;
+  --foreground: #ededed;
+  --primary: #4B0082;
+  --primary-dark: #2F0059;
+  --primary-bright: #7A00D4;
+  --primary-text: #E6E6E6;
+  --secondary: #0D1F2D;
+  --secondary-dark: #0A0E18;
+  --secondary-bright: #6D9EC9;
+  --secondary-text: #2F2F2F;
+  --default-text: #B0B0B0;
+  --warning: #FF8C00;
+  --success: #32CD32;
+  --error: #FF4C4C;
+  --disabled: grey;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --border-radius: 4px;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(175deg, var(--primary) 5%, var(--primary-dark) 10%, var(--background) 40%, var(--background) 90%, var(--primary-dark));
+  background-attachment: fixed;
+  backdrop-filter: blur(100px);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+}
+
+.available-slot {
+  border: 1px dashed var(--disabled);
+  border-radius: var(--border-radius);
+  color: var(--disabled);
+  font-size: 1.2rem;
+}
+
+.periodic-table-cell {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.periodic-table-cell:hover {
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 4px var(--primary);
+}
+
+.periodic-table-cell-selected {
+  border: 1px solid var(--secondary-bright);
+  box-shadow: 0px 2px 4px var(--secondary-bright);
+}
+
+
+.periodic-table-symbol-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.exceeded {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+
+  0%,
+  15%,
+  30%,
+  45%,
+  60%,
+  75%,
+  90% {
+    transform: translateX(0);
+  }
+
+  5%,
+  20%,
+  35%,
+  50%,
+  65%,
+  80%,
+  95% {
+    transform: translateX(-2px);
+  }
+
+  10%,
+  25%,
+  40%,
+  55%,
+  70%,
+  85%,
+  100% {
+    transform: translateX(2px);
+  }
+}
+
+.element-card-icon {
+  font-size: 20px !important;
 }
