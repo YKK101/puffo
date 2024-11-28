@@ -1,12 +1,12 @@
 "use client"
-import { IElement } from "@/app/constants/interface";
+import { Element } from "@/app/constants/type";
 import { groupColors, MAX_INGREDIENTS } from "../constants/constants";
 
 type PeriodicTableCellProps = {
-    cell: IElement | null;
+    cell: Element | null;
     selected?: boolean;
     selectable?: boolean;
-    onChanged?: (cell: IElement) => void;
+    onChanged?: (cell: Element) => void;
 };
 
 const PeriodicTableCell: React.FC<PeriodicTableCellProps> = ({ cell, selected, selectable, onChanged }) => {
@@ -48,14 +48,14 @@ const PeriodicTableCell: React.FC<PeriodicTableCellProps> = ({ cell, selected, s
 };
 
 type PeriodicTableProps = {
-    elements: (IElement | null)[][];
-    selectedElements: IElement[];
-    onSelectCell: (cell: IElement) => void;
-    onDeselectCell: (cell: IElement) => void;
+    elements: (Element | null)[][];
+    selectedElements: Element[];
+    onSelectCell: (cell: Element) => void;
+    onDeselectCell: (cell: Element) => void;
 };
 
 const PeriodicTable: React.FC<PeriodicTableProps> = ({ elements, selectedElements, onSelectCell, onDeselectCell }) => {
-    const handleToggle = (cell: IElement) => {
+    const handleToggle = (cell: Element) => {
         if (selectedElements.includes(cell)) {
             onDeselectCell(cell);
         } else {
@@ -66,9 +66,9 @@ const PeriodicTable: React.FC<PeriodicTableProps> = ({ elements, selectedElement
     return (
         <table className="table-fixed border-separate border-spacing-2 lg:w-full">
             <tbody>
-                {elements.map((row: (IElement | null)[], ridx: number) => (
+                {elements.map((row: (Element | null)[], ridx: number) => (
                     <tr key={`row-${ridx}`}>
-                        {row.map((cell: (IElement | null), cidx: number) => (
+                        {row.map((cell: (Element | null), cidx: number) => (
                             <td key={`cell-${cidx}`} className="h-8 xl:h-[50px]">
                                 <PeriodicTableCell
                                     key={`cell-${ridx}-${cidx}`}

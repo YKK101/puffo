@@ -1,10 +1,10 @@
-import { IElement } from "../constants/interface";
+import { Element } from "../constants/type";
 import { MAX_INGREDIENTS } from "../constants/constants";
 import { ElementCard } from "./ElementCard";
 import { AvailableSlot } from "./AvailableSlot";
 
 type ElementListProps = {
-  elements: IElement[];
+  elements: Element[];
 }
 
 export const ElementList: React.FC<ElementListProps> = ({ elements: selectedElements }) => {

@@ -1,11 +1,11 @@
 import { groupColors, statusIcons } from "../constants/constants";
-import { IElement } from "../constants/interface";
+import { Element } from "../constants/type";
 
-interface ElementCardProps {
-    element: IElement;
+type ElementCardProps = {
+    element: Element;
     width?: number;
     height?: number;
-}
+};
 
 export const ElementCard: React.FC<ElementCardProps> = ({ element, width, height }) => {
     return (

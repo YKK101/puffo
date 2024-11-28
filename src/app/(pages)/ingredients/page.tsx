@@ -3,18 +3,18 @@
 import { usePeriodicTable } from "@/app/business/hooks/usePeriodicTable";
 import { ElementList } from "@/app/components/ElementList";
 import PeriodicTable from "@/app/components/PeriodicTable";
-import { IElement } from "@/app/constants/interface";
+import { Element } from "@/app/constants/type";
 import { useState } from "react";
 
 export default function Ingredients() {
   const pTable = usePeriodicTable();
-  const [selectedElements, setSelectedElements] = useState<IElement[]>([]);
+  const [selectedElements, setSelectedElements] = useState<Element[]>([]);
 
-  const handleSelect = (cell: IElement) => {
+  const handleSelect = (cell: Element) => {
     setSelectedElements([...selectedElements, cell]);
   }
 
-  const handleDeselect = (elementToDeselect: IElement) => {
+  const handleDeselect = (elementToDeselect: Element) => {
     setSelectedElements(
       selectedElements.filter((selectedElement) => selectedElement !== elementToDeselect)
     );

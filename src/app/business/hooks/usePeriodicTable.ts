@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
-import { IElement } from "@/app/constants/interface";
+import { Element } from "@/app/constants/type";
 import { ptableElements } from "@/app/constants/ptableElements";
 
 export const usePeriodicTable = () => {
-    const ptable: (IElement | null)[][] = useMemo(() => {
-        const rowObj: { [key: number]: (IElement | null)[] } = {};
+    const ptable: (Element | null)[][] = useMemo(() => {
+        const rowObj: { [key: number]: (Element | null)[] } = {};
         for (let i = 0; i < 10; i++) {
             rowObj[i] = Array(18).fill(null);
         }

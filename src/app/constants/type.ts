@@ -1,4 +1,4 @@
-export interface IElement {
+export type Element = {
     atomic_number: number,
     element_symbol: string,
     element_name: string,
