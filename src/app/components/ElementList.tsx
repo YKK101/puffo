@@ -11,16 +11,14 @@ export const ElementList: React.FC<ElementListProps> = ({ elements: selectedElem
   const maxIngredients = MAX_INGREDIENTS;
   const emptySlots = maxIngredients - selectedElements.length;
 
-  const CELL_WIDTH = typeof window === "undefined" || window.innerWidth > 600 ? 200 : window.innerWidth;
-
   return (
-    <div className="flex flex-row lg:flex-col gap-4 flex-wrap">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
       {selectedElements.map((element) => (
-        <ElementCard key={element.atomic_number} element={element} width={CELL_WIDTH} height={80} />
+        <ElementCard key={element.atomic_number} element={element} height={80} />
       ))}
 
       {Array.from({ length: emptySlots }).map((_, idx) => (
-        <AvailableSlot key={`empty-slot-${idx}`} width={CELL_WIDTH} height={80} />
+        <AvailableSlot key={`empty-slot-${idx}`} height={80} />
       ))}
     </div>
   );

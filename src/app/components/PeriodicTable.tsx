@@ -18,9 +18,9 @@ const PeriodicTableCell: React.FC<PeriodicTableCellProps> = ({ cell, selected, s
         if (!selectable && !selected) {
             const element = document.getElementById(cell.atomic_number.toString());
             if (!element) { return; }
-            element.classList.add('exceeded');
+            element.classList.add('invalid-shake');
             setTimeout(() => {
-                element.classList.remove('exceeded');
+                element.classList.remove('invalid-shake');
             }, 250);
         } else {
             onChanged?.call(self, cell);
