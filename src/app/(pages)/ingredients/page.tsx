@@ -8,6 +8,7 @@ import { Element } from "@/app/constants/type";
 import { useState } from "react";
 import Button from "@/app/components/Button";
 import Modal from "@/app/components/Modal";
+import Image from "next/image";
 
 export default function Ingredients() {
   const pTable = usePeriodicTable();
@@ -53,7 +54,13 @@ export default function Ingredients() {
         </div>
       </div>
       <Modal isShow={generatedMonsterImage !== null} onClose={() => setGeneratedMonsterImage(null)}>
-        <img className="w-[260px] rounded-lg" src={generatedMonsterImage || ""} />
+        <Image
+          className="w-[260px] rounded-lg"
+          src={generatedMonsterImage || ""}
+          alt="Generated Monster"
+          width={260}
+          height={260}
+        />
       </Modal>
     </div>
   );
