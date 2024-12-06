@@ -7,3 +7,10 @@ export type Element = {
     status: string,
     grid_location: number[],
 }
+
+export type Monster = {
+    name: string,
+    personality: string,
+    highlight_feature: string,
+    image: string,
+}

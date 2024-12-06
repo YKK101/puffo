@@ -97,6 +97,13 @@ body {
   border: 1px solid var(--primary-bright);
 }
 
+/* TEXT */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* CARDS */
 
 .card {
