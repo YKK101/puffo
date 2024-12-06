@@ -20,12 +20,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Screen Shot
 <img width="1469" alt="ภาพถ่ายหน้าจอ 2567-12-03 เวลา 16 07 55" src="https://github.com/user-attachments/assets/96be8ba7-1dff-45ec-842d-63ce5faf9c32">
-<img width="1466" alt="ภาพถ่ายหน้าจอ 2567-12-03 เวลา 16 01 05" src="https://github.com/user-attachments/assets/d80d32f4-d83e-4e17-aaa3-0a6ec8ee0c72">
-
-![การบันทึกหน้าจอ 2567-11-28 เวลา 00 52 34](https://github.com/user-attachments/assets/d3883433-1701-42b8-847f-52b78b296458)
+<img width="1470" alt="ภาพถ่ายหน้าจอ 2567-12-06 เวลา 23 22 04" src="https://github.com/user-attachments/assets/ff9e2d2d-26dd-4fda-8eaa-5e25a72b01c2">
+<img width="1469" alt="ภาพถ่ายหน้าจอ 2567-12-06 เวลา 23 28 29" src="https://github.com/user-attachments/assets/2adf49ca-cbb5-4124-adc3-6b6a99a70e0b">
 
 ## Next Step
-> :memo:: Change to context and render result in new path
+> :memo:: Mixing action
 
 > :memo:: Loading and improve api
 
